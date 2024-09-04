@@ -1,0 +1,56 @@
+.nav-section {
+    padding: 2vh 10vw 2vh 10vw;
+
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.burger-menu {
+    display: none;
+}
+.size{
+    position: absolute;
+    font-size: 0.7rem;
+    left: 90%;
+    bottom: 94%;
+}
+@media (max-width :750px) {
+
+    .nav-links  {
+        display:none; /* Hide the links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Add some space between links */
+        position: absolute;
+        top:11%;
+        right: 6%;
+        background-color: white;
+   
+        width: 82%;
+        padding: 1rem;
+        z-index: 10; 
+        border: 1px solid rgb(219, 215, 215);
+    }
+    .burger-menu {
+    display: block;
+}
+.nav-links.active {
+    display: flex;
+}
+.size{
+  
+    left: 52%;
+    bottom: 14%;
+}
+
+}

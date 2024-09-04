@@ -1,0 +1,71 @@
+.products-section {
+    padding: 5vh 10vw;
+    /* height: 75vh;  */
+}
+.products-wrapper {
+    height: 100%;
+    
+}
+.products-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Shows 4 columns by default */
+    gap: 2rem; /* Adjusts gap between items */
+    cursor: pointer;
+    width: 100%;
+}
+.product-img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 15rem; /* Limits maximum width for larger screens */
+    height: auto; /* Maintains aspect ratio */
+}
+.product {
+    border: 1px solid rgb(189, 188, 188);
+    padding: 1rem;
+    font-size: 1.2rem;
+    transition: transform 0.3s; /* Smooth hover effect */
+    
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+.add-cart-btn{
+    padding: 1rem;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+@media (max-width:950px) {
+
+    .products-block {
+   
+    grid-template-columns: repeat(2, 1fr); /* Shows 4 columns by default */
+    gap: 2rem; /* Adjusts gap between items */
+    cursor: pointer;
+    width: 100%;
+}
+}
+@media (max-width:1000px) {
+
+    .products-block {
+   
+    grid-template-columns: repeat(2, 1fr); /* Shows 4 columns by default */
+    gap: 2rem; /* Adjusts gap between items */
+    cursor: pointer;
+    width: 100%;
+}
+}
+@media (max-width:750px) {
+
+    .products-block {
+   
+    grid-template-columns: repeat(1, 1fr); /* Shows 4 columns by default */
+    gap: 2rem; /* Adjusts gap between items */
+    cursor: pointer;
+    width: 100%;
+}
+}

@@ -1,0 +1,103 @@
+/* Home Section Styling */
+.home-section {
+    padding: 3vh 10vw;
+    height: 80vh; /* Adjusts to 75% of viewport height */
+    background-image: url('../images/makeup.jpg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-wrapper {
+    color: rgb(0, 0, 0);
+}
+
+.hero-heading h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center; /* Center-aligns the heading */
+}
+
+/* Deals Section Styling */
+.deals-section {
+    padding: 5vh 10vw;
+}
+
+.deals-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers the content */
+    text-align: center; /* Center-aligns the text */
+}
+
+.deals-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem; /* Adds spacing below heading */
+}
+
+.deals-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Shows 4 columns by default */
+    gap: 2rem; /* Adjusts gap between items */
+    cursor: pointer;
+    width: 100%;
+}
+
+.deals {
+    border: 1px solid rgb(189, 188, 188);
+    padding: 1rem;
+    font-size: 1.2rem;
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.deals:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+.deal-img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 15rem; /* Limits maximum width for larger screens */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Media Query for Tablets and Smaller Screens */
+@media (max-width: 1000px) {
+    .hero-heading h1 {
+        font-size: 4rem; /* Reduces heading size */
+    }
+    
+    .deals-products {
+        grid-template-columns: repeat(1, 1fr); /* Shows 2 columns on medium screens */
+        gap: 2rem; /* Reduces gap for better fit */
+    }
+    
+    .deal-img {
+        width: 100%;
+        max-width: 15rem; /* Adjusts maximum width */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+    .home-section {
+        padding: 5vh 5vw; /* Increases padding for smaller screens */
+    }
+
+    .hero-heading h1 {
+        font-size: 3rem; /* Further reduces heading size */
+    }
+    
+    .deals-products {
+        grid-template-columns: 1fr; /* Shows 1 column on small screens */
+    }
+    
+    .deal-img {
+        max-width: 100%; /* Makes image full width on mobile */
+    }
+}
