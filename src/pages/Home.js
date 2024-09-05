@@ -55,6 +55,7 @@ function Home() {
                <Link   to={`/productsDetails/${deal.id}`}  style={{textDecoration : 'none' , color :'black'}} >
                 <div><img src={deal.images} className='deal-img'/></div>
                 <div><h3>{deal.title}</h3></div>
+                <div style={{textTransform:'capitalize'}}>{deal.category}</div>
                 </Link>
 
                 </div>

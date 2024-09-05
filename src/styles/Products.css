@@ -39,6 +39,41 @@
     margin-top: 1rem;
     cursor: pointer;
 }
+
+/* Style for the category filter dropdown */
+.category-filter {
+  margin-bottom: 1rem;
+}
+
+.category-filter select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width as needed */
+  transition: border-color 0.3s ease;
+}
+
+.category-filter select:focus {
+  border-color: #007bff; /* Change to your preferred focus color */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a shadow on focus */
+}
+
+.category-filter option {
+  padding: 0.5rem;
+}
+
+/* Styling for the select box container */
+.select-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
 @media (max-width:950px) {
 
     .products-block {
