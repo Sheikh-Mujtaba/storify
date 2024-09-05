@@ -55,3 +55,14 @@
     background-color: black;
     color: white;
 }
+@media (max-width:1000px) {
+    .cart-items {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 50%;
+    /* border: 1px solid black; */
+}
+  
+}

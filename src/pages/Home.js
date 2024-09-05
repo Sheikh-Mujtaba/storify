@@ -1,12 +1,13 @@
 import React, { useState ,useEffect} from 'react';
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
 
 function Home() {
     const [deals,setDeals] =useState([]);
-    
+    const {productId} =useParams();
     const API ='https://dummyjson.com/products';
 
     useEffect(()=>{
@@ -51,7 +52,7 @@ function Home() {
               {deals.slice (0,3 ).map((deal)=>(
                 <div key= {deal.id} className='deals'> 
 
-               <Link  style={{textDecoration : 'none' , color :'black'}} >
+               <Link   to={`/productsDetails/${deal.id}`}  style={{textDecoration : 'none' , color :'black'}} >
                 <div><img src={deal.images} className='deal-img'/></div>
                 <div><h3>{deal.title}</h3></div>
                 </Link>
