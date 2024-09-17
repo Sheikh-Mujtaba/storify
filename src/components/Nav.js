@@ -26,7 +26,7 @@ import { RxCross1 } from "react-icons/rx";
         <div className={`nav-links ${show ? 'active' : ''}` }>
         <Link style={{textDecoration:'none' ,color :'black'}} to='/products'>   <p>Products</p></Link>
     
-        <Link style={{textDecoration:'none' ,color :'black'}} to='/login'>   <p>Login</p></Link>
+        {/* <Link style={{textDecoration:'none' ,color :'black'}} to='/login'>   <p>Login</p></Link> */}
           <Link style={{textDecoration:'none' ,color :'black' , fontSize:'1rem'}} to='/cart'>      <FaCartArrowDown  /></Link>
         <div className='size'>{size}</div>
 
