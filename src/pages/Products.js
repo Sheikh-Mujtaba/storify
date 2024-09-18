@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Products.css';
 import { Link } from 'react-router-dom';
 
-function Products() {
+function Products({addToCart}) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [category, setCategory] = useState('');
@@ -68,7 +68,9 @@ const handleCategory=(e)=>{
                   <div><h3>{product.title}</h3></div>
                   <div style={{ textTransform: 'capitalize' }}>{product.category}</div>
                   <div><h3>€{product.price}</h3></div>
+                 
                 </Link>
+                <button className='add-cart-btn'  onClick={() => addToCart(product)}>Add to cart</button>
               </div>
             ))
           ) : (
