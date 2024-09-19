@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Products.css';
 import { Link } from 'react-router-dom';
+import PageWrapper from '../components/PageWrapper'; 
 
 function Products({addToCart}) {
   const [products, setProducts] = useState([]);
@@ -40,6 +41,7 @@ const handleCategory=(e)=>{
 }
 
   return (
+    <PageWrapper>
     <div className='products-section'>
       <div className='products-wrapper'>
         <div className='select-container'>
@@ -79,6 +81,7 @@ const handleCategory=(e)=>{
         </div>
       </div>
     </div>
+    </PageWrapper>
   );
 }
 

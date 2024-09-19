@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import Footer from './components/Footer';
@@ -40,6 +41,7 @@ function App() {
   };
 
   return (
+    
     <div className="App">
       {showAlert && <div className="alert">{alertMessage}</div>}  {/* Display alert if showAlert is true */}
       <Router>

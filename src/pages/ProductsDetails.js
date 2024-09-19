@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/ProductsDetails.css';
 import { useParams } from 'react-router-dom';
+import PageWrapper from '../components/PageWrapper';
 
  function ProductsDetails({addToCart}) {
     const [details,setDetails]=useState([]);
@@ -26,6 +27,7 @@ import { useParams } from 'react-router-dom';
       }, [productId]); // Empty dependency array means this effect runs once on mount
     
   return (
+   <PageWrapper>
     <div className='details-section'>
         <div className='details-wrapper'>
       
@@ -43,6 +45,7 @@ import { useParams } from 'react-router-dom';
         </div>
       
     </div>
+    </PageWrapper>
   )
 }
 export default ProductsDetails;
